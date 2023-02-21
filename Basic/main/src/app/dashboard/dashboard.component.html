@@ -1,0 +1,28 @@
+<!-- https://www.geeksforgeeks.org/angular-file-upload/ -->
+
+<ul class="nav navbar-nav" style="background-color:rgb(204, 215, 0) ;">
+	<h1 style="color:white ;">Mortgage Eligibility and Approval Prediction</h1>
+</ul>
+<br><br>
+<div class="im">
+	<img src="assets/loader3.gif" style="width: 15cm ;">
+</div>
+<div class="bb">
+	<input class="form-control" type="file" [accept]="'.csv'" (change)="onChange($event)">
+	<br>
+	<br>
+	<!-- <mat-form-field class="full-width">
+		<input formControlName="Username" type="text" matInput placeholder="No. of Months" required>
+	  </mat-form-field> -->
+	<p>Upload your dataset here to proceed the prediction</p>
+	<button (click)="onUpload()" class="btn btn-success" type="submit">
+		Upload
+	</button>
+</div>
+<br><br>
+
+<!--Flag variable is used here-->
+<div class="bb2" *ngIf="loading">
+	<h3>The Results will be Popped up!</h3>
+</div>
+<br><br>
